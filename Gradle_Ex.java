@@ -7,7 +7,7 @@ public class Gradle_Ex{
         }
         int n = 0;
         try{
-            n = Integer.parseInt(arg[0]);
+            n = Integer.parseInt(args[0]);
         }catch(NumberFormatException e){
             System.err.println("Not an int, you fool");
             System.exit(1);
@@ -20,7 +20,7 @@ public class Gradle_Ex{
         lazy(n);
     }
 
-    public int tri(int n){
+    public static int tri(int n){
         int accum = 0;
         for (int i = n; i > 0 ; i--){
             accum += i;
@@ -31,8 +31,8 @@ public class Gradle_Ex{
         return accum;
     }
 
-    public int lazy(int n){
-        int l = (Math.pow(n, 2) + n + 2) / 2 ;
+    public static double lazy(int n){
+        double l = (Math.pow(n, 2) + n + 2) / 2 ;
         System.out.println("Lazy(n) = " + l);
         return l;
     }
